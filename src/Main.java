@@ -1,4 +1,5 @@
 import db.DBHandler;
+import ui.UIHandler;
 import web.Browser;
 
 import java.sql.SQLException;
@@ -10,10 +11,8 @@ public class Main {
         DBHandler db = new DBHandler();
         Browser browser = new Browser(db);
 
-        Scanner scanner = new Scanner(System.in);
-        //String channelName = scanner.nextLine();
+        UIHandler ui = new UIHandler(browser, db);
 
-        browser.readMessages("gronkh");
 
     }
 }
